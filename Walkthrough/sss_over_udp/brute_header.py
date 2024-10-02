@@ -22,7 +22,7 @@ def calculate_crc32(data: bytes) -> int:
 
 def create_packet(header: bytes, content: bytes) -> bytes:
     """
-    Description:Create a complete data packet consisting of a header, size, content, and checksum.
+    Description: Create a complete data packet consisting of a header, size, content, and checksum.
 
     Parameters:
         header (bytes): The header to identify the type of packet.
