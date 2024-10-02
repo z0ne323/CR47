@@ -1472,7 +1472,7 @@ Okay the port is open, let's start to look at the doc and let's code a script to
 
 #### Doing some recon on `sss_over_udp`
 
-After thorough analysis of the documentation, we were able to produce a script called `brute_header.py` (you can find `brute_header.py` right [here]())
+After thorough analysis of the documentation, we were able to produce a script called `brute_header.py` (you can find `brute_header.py` right [here](https://github.com/z0ne323/CR47/blob/main/Walkthrough/sss_over_udp/brute_header.py))
 
 ```bash
 ┌──(kali㉿kali)-[~/Desktop]
@@ -1489,7 +1489,7 @@ Now that we got all the needed valid headers, we can produce a valid client base
 
 As of now, we already coded a few needed function (through `brute_header.py`), mainly to create our custom packets, but we also got the three message ids we needed!
 
-Now, we can create a full fledge `client.py` to execute command as `root`! (you can find `client.py` right [here]())
+Now, we can create a full fledge `client.py` to execute command as `root`! (you can find `client.py` right [here](https://github.com/z0ne323/CR47/blob/main/Walkthrough/sss_over_udp/client.py))
 
 ```
 ┌──(kali㉿kali)-[~/Desktop/sss_over_udp]
