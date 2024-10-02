@@ -22,7 +22,7 @@ def calculate_crc32(data: bytes) -> int:
 
 def create_packet(header: bytes, content: bytes) -> bytes:
     """
-    Create a complete data packet consisting of a header, size, content, and checksum.
+    Description:Create a complete data packet consisting of a header, size, content, and checksum.
 
     Parameters:
         header (bytes): The header to identify the type of packet.
@@ -38,8 +38,7 @@ def create_packet(header: bytes, content: bytes) -> bytes:
 
 def send_message(sock, addr, header, content):
     """
-    Description:
-        Send a message as a complete data packet to a specified address using a socket.
+    Description: Send a message as a complete data packet to a specified address using a socket.
     
     Parameters:
         sock (socket.socket): The socket object used for sending the packet.
@@ -59,9 +58,8 @@ def send_message(sock, addr, header, content):
 
 def receive_message(sock):
     """
-    Description:
-        Receive a message from a socket and extract its components, including 
-        header, content, and checksum verification.
+    Description: Receive a message from a socket and extract its components, 
+        including header, content, and checksum verification.
     
     Parameters:
         sock (socket.socket): The socket object used to receive the packet.
@@ -90,8 +88,7 @@ def receive_message(sock):
 
 def discover_headers():
     """
-    Description:
-        Discover valid headers by sending specific request messages to a server 
+    Description: Discover valid headers by sending specific request messages to a server 
         and checking the responses for each header type. This function iterates 
         through all possible 2-byte headers and identifies headers for Connect, 
         Command, and Disconnect requests.
