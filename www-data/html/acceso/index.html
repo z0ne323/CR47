@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>As of now, 3 versions of BF</title>
+  <link rel="icon" href="../AdamAir_logo.png" type="image/png">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden; /* Prevent scrolling */
+      background: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00, #ff00ff);
+      background-size: 400% 400%;
+      animation: gradientAnimation 6s ease infinite alternate;
+      color: white;
+      font-family: 'Arial', sans-serif;
+    }
+    
+    @keyframes gradientAnimation {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+    
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      perspective: 1000px;
+      overflow: hidden;
+    }
+    
+    .text {
+      font-size: 1.5rem; /* Adjust font size as needed */
+      animation: rotateText 10s linear infinite;
+      white-space: pre; /* Preserve whitespace formatting */
+      overflow-wrap: break-word; /* Ensure text wraps within the container */
+    }
+    
+    @keyframes rotateText {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    
+    .tornado {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 200px;
+      height: 200px;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+      animation: tornadoAnimation 3s linear infinite;
+    }
+    
+    @keyframes tornadoAnimation {
+      0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+      }
+      100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="text">++++++++++[>+>+++>+++++++>++++++++++<<<<-]>>>+++.<++.>>+++++++++++++++++++.----------------------.++++++++++++++++++.<<.>>-------.-----------.+++++++++++++++++++++++++.-.<<++++++++++++.------------.>>-----.------------.+.++++++++++.<<.>>++++.----------------------.++++++++++++++++++.<<.>>.++.-----..-.++++.--------------.-.<<.>>++++++++++++++++.-----.<<.>>-------------.+++.<<.>>----.<<.>>++++++.--.+++++++++.---------.+++++++++++++.---------.------.<<.>------.>++++++++++++.++++.+.-------------------.<<.>+++++++++++++++.>++++++++.------.--.<<.>>++++++++++++++++++++++.------------------.---.+++++++++++++++++.----------.+++++++++++.---------------.<<.>>---.+++++++++++++++++++.-.<<.>>-------.--------.+++.<<++++++++++++++.--------------.>----------.>+++++++.+.-----------.<<.>>++++++++++++++++++++.----------.++++++.<<+++++++.>>---------..<<-------.>>------.+++.+++++.----------.<<.>>---.+++++++++++..<<.>>++++++++.------------.---.<<.>>++++++++++++++.--------------.--.+++++++++++++++.-------------.+++++++++++++++.-.<<.>>++++++.----------.++++++.<<.>>-------.---------..-.<<++++++++++++.------------.>>++++++++++++++++.-----------.++++.--------.<<.>>+++++++++++++++.-----.<<.>>-------.+++++++++++++.-------.++++++.<<++++++++++++++...</div>
+    <div class="tornado"></div>
+  </div>
+
+  <script>
+    // Add event listener for mousemove to change background color
+    document.addEventListener('mousemove', function(event) {
+      const x = Math.round((event.clientX / window.innerWidth) * 255);
+      const y = Math.round((event.clientY / window.innerHeight) * 255);
+      document.body.style.backgroundColor = 'rgb(' + x + ',' + y + ',100)';
+    });
+  </script>
+
+</body>
+</html>

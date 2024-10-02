@@ -1,0 +1,7 @@
+Hey, 
+
+We just got the doc from dev team. I created a client file, but I'm not able to understand a thing from the documentation.
+
+Could you help create the client side of this new "protocol" ?
+
+Santiago

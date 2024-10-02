@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE ANSWER IS NO</title>
+    <link rel="icon" href="AdamAir_logo.png" type="image/png">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0; /* Background color for better visibility */
+        }
+        #video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1; /* Set z-index to send the video to the background */
+        }
+        #video-container video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+        }
+        h1 {
+            font-size: 6em; /* Super big font size */
+            text-align: center; /* Center the text horizontally */
+            animation: rainbow 5s infinite alternate; /* Apply the rainbow animation */
+            color: white; /* Set text color to white */
+            position: absolute; /* Position the text absolutely */
+            z-index: 1; /* Set z-index to bring the text to the front */
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: transparent; /* Set background color to transparent */
+            color: white;
+            border: 2px solid transparent; /* Set border to transparent */
+            border-radius: 5px;
+            font-size: 1.1em;
+            transition: background-color 0.3s, border-color 0.3s; /* Add transition effect */
+            position: absolute;
+            top: calc(50% + 100px); /* Position the button below the text */
+            left: 50%;
+            transform: translateX(-50%);
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: transparent; /* Change background color on hover */
+            border-color: white; /* Change border color on hover */
+        }
+
+        /* Define keyframes for the rainbow animation */
+        @keyframes rainbow {
+            0% { color: red; }
+            16.67% { color: orange; }
+            33.33% { color: yellow; }
+            50% { color: green; }
+            66.67% { color: blue; }
+            83.33% { color: indigo; }
+            100% { color: violet; }
+        }
+    </style>
+</head>
+<body>
+    <div id="video-container">
+        <video autoplay loop muted id="video-background">
+            <source src="meme.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <h1>Hell, No.</h1>
+    <a href="/" class="btn">Get back to the <i><b>Rich Coast</b></i></a>
+</body>
+</html>
