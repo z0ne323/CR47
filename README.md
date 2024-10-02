@@ -1,6 +1,7 @@
-![banner]()
+![BANNER](https://github.com/user-attachments/assets/bc1828fa-e687-4140-ac24-d9cc997f3175)
 
-You can find the Write-Up just [here]() and if you're interested about this new "concept", I also created a `Roadmap.md` file just [there]()
+
+You can find the Write-Up just [here](https://github.com/z0ne323/CR47/blob/main/Walkthrough/Walkthrough.md) and if you're interested about this new "concept", I also created a `Roadmap.md` file just [there](https://github.com/z0ne323/CR47/blob/main/Roadmap.md)
 
 # CR47 set up guide
 ## Installing the server
