@@ -1162,9 +1162,7 @@ Now we can call the `3x3cut3/` endpoint like so:
 
 ```
 
-We should see our command hang and if we go back to the tab we set up our listener on, we should see a connection back! : 
-
-(**SIDE NOTE**: It's actually possible, because of an error of logic in the code of the API, to submit the regular api key as the `X-Sensitive-API-Key` header and execute your code like so:
+(SIDE NOTE: It's actually possible, because of an error of logic in the code of the API, to submit the regular api key as the `X-Sensitive-API-Key` header and execute your code like so:
 
 ```bash
 ┌──(kali㉿kali)-[~/Desktop]
@@ -1172,6 +1170,8 @@ We should see our command hang and if we go back to the tab we set up our listen
 
 ```
 )
+
+We should see our command hang and if we go back to the tab we set up our listener on, we should see a connection back! : 
 
 ```bash
 ┌──(kali㉿kali)-[~/Desktop]
