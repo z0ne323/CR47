@@ -1162,7 +1162,7 @@ Now we can call the `3x3cut3/` endpoint like so:
 
 ```
 
-(SIDE NOTE: It's actually possible, because of an error of logic in the code of the API, to submit the regular api key as the `X-Sensitive-API-Key` header and execute your code like so:
+(Side note: It's actually possible, because of an error of logic in the code of the API, to submit the regular api key as the `X-Sensitive-API-Key` header and execute your code like so:
 
 ```bash
 ┌──(kali㉿kali)-[~/Desktop]
