@@ -1142,6 +1142,15 @@ Santiago
 
 Bingo ! We just used `William` to leak the `X-Sensitive-API-Key` from some internal note he got somehow !!
 
+(Side note: It appears `William` is vulnerable to a `DOM XSS` on this line:
+```
+messageElement.innerHTML = `<strong>${sender === 'user' ? 'Me' : 'William'}:</strong> ${message}`;
+```
+
+Since our user input is stored in the `message` variable and is directly placed into `innerHTML`, it's vulnerable to `DOM XSS`.
+
+Technically, this doesn't help us gain a foothold or progress in the machine but can create a risk for user interacting with `William`. A working PoC would be to make the chatbot ingest this one line through the web browser by submitting this: `<img src=x onerror="alert('DOM-based XSS via img')">` into our text box!)
+
 #### Back at exploiting `NFMS`
 
 Now that we own the `X-Sensitive-API-Key`, we can use it to execute our reverse shell, but before, let's set up a listener through `pwncat`:
